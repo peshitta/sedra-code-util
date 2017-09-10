@@ -55,41 +55,41 @@ npm run build
 
 ## API Reference
 
-* [sedra](#peshitta.module_sedra)
-    * [.wow](#peshitta.module_sedra.wow) : <code>string</code>
-    * [.yod](#peshitta.module_sedra.yod) : <code>string</code>
-    * [.consonants](#peshitta.module_sedra.consonants) : <code>Array.&lt;string&gt;</code>
-    * [.vowels](#peshitta.module_sedra.vowels) : <code>Array.&lt;string&gt;</code>
-    * [.diacretics](#peshitta.module_sedra.diacretics) : <code>Array.&lt;string&gt;</code>
-    * [.isConsonant](#peshitta.module_sedra.isConsonant) ⇒ <code>boolean</code>
-    * [.isVowel](#peshitta.module_sedra.isVowel) ⇒ <code>boolean</code>
-    * [.isDiacretic](#peshitta.module_sedra.isDiacretic) ⇒ <code>boolean</code>
+* [sedra](#module_sedra)
+    * [.wow](#module_sedra.wow) : <code>string</code>
+    * [.yod](#module_sedra.yod) : <code>string</code>
+    * [.consonants](#module_sedra.consonants) : <code>Array.&lt;string&gt;</code>
+    * [.vowels](#module_sedra.vowels) : <code>Array.&lt;string&gt;</code>
+    * [.diacretics](#module_sedra.diacretics) : <code>Array.&lt;string&gt;</code>
+    * [.isConsonant](#module_sedra.isConsonant) ⇒ <code>boolean</code>
+    * [.isVowel](#module_sedra.isVowel) ⇒ <code>boolean</code>
+    * [.isDiacretic](#module_sedra.isDiacretic) ⇒ <code>boolean</code>
 
-<a name="peshitta.module_sedra.wow"></a>
+<a name="module_sedra.wow"></a>
 
 ### sedra.wow : <code>string</code>
 Wow semivowel
 
-**Kind**: static constant of [<code>sedra</code>](#peshitta.module_sedra)  
-<a name="peshitta.module_sedra.yod"></a>
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+<a name="module_sedra.yod"></a>
 
 ### sedra.yod : <code>string</code>
 Yod semivowel
 
-**Kind**: static constant of [<code>sedra</code>](#peshitta.module_sedra)  
-<a name="peshitta.module_sedra.consonants"></a>
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+<a name="module_sedra.consonants"></a>
 
 ### sedra.consonants : <code>Array.&lt;string&gt;</code>
 Sedra consonants
 
-**Kind**: static constant of [<code>sedra</code>](#peshitta.module_sedra)  
-<a name="peshitta.module_sedra.vowels"></a>
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+<a name="module_sedra.vowels"></a>
 
 ### sedra.vowels : <code>Array.&lt;string&gt;</code>
 Sedra vowels
 
-**Kind**: static constant of [<code>sedra</code>](#peshitta.module_sedra)  
-<a name="peshitta.module_sedra.diacretics"></a>
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+<a name="module_sedra.diacretics"></a>
 
 ### sedra.diacretics : <code>Array.&lt;string&gt;</code>
 Sedra/CAL diacretic characters:
@@ -98,37 +98,37 @@ Sedra/CAL diacretic characters:
 * **_** line under
 * __*__ Seyame
 
-**Kind**: static constant of [<code>sedra</code>](#peshitta.module_sedra)  
-<a name="peshitta.module_sedra.isConsonant"></a>
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+<a name="module_sedra.isConsonant"></a>
 
 ### sedra.isConsonant ⇒ <code>boolean</code>
 Is character c a Sedra 3 consonant?
 
-**Kind**: static constant of [<code>sedra</code>](#peshitta.module_sedra)  
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
 **Returns**: <code>boolean</code> - true if c is Sedra 3 consonant  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="peshitta.module_sedra.isVowel"></a>
+<a name="module_sedra.isVowel"></a>
 
 ### sedra.isVowel ⇒ <code>boolean</code>
 Is character c a Sedra 3 vowel?
 
-**Kind**: static constant of [<code>sedra</code>](#peshitta.module_sedra)  
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
 **Returns**: <code>boolean</code> - true if c is Sedra 3 vowel  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="peshitta.module_sedra.isDiacretic"></a>
+<a name="module_sedra.isDiacretic"></a>
 
 ### sedra.isDiacretic ⇒ <code>boolean</code>
 Is character c a diacretic? Same characters used for both Sedra 3 and CAL.
 
-**Kind**: static constant of [<code>sedra</code>](#peshitta.module_sedra)  
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
 **Returns**: <code>boolean</code> - true if c is a diacretic  
 
 | Param | Type | Description |

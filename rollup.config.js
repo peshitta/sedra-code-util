@@ -38,7 +38,7 @@ const banner = isProduction
 
 const external = Object.keys(pkg.dependencies);
 const input = 'src/main.js';
-const name = 'peshitta.sedra';
+const name = 'sedraCodeUtil';
 const format = 'umd';
 const sourcemap = isProduction ? false : 'inline';
 const plugins = [babel(babelrc({ path: 'babelrc.json' }))];

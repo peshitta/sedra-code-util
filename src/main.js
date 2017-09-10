@@ -1,4 +1,4 @@
-/** @module peshitta.sedra */
+/** @module sedra */
 /**
  * Wow semivowel
  * @constant

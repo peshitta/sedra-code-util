@@ -8,11 +8,11 @@
   "scripts": {
     "prebuild": "npm run doc && npm run lint && npm test",
     "build": "rollup -c --environment BUILD:production",
+    "prepublishOnly": "npm run build",
     "pretest": "rollup -c",
     "test": "mocha",
     "lint": "eslint src test",
     "doc": "jsdoc2md -t doc/readme.hbs src/*.js > README.md",
-    "prepublishOnly": "npm run build",
     "coverage": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "eslintConfig": {

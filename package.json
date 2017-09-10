@@ -1,0 +1,77 @@
+{
+  "name": "sedra-code-util",
+  "version": "1.0.0",
+  "description": "Utility library for Sedra 3 ASCII code transliteration",
+  "main": "build/sedra-code-util.js",
+  "main݂Min": "build/sedra-code-util.min.js",
+  "module": "build/sedra-code-util.esm.js",
+  "scripts": {
+    "prebuild": "npm run doc && npm run lint && npm test",
+    "build": "rollup -c --environment BUILD:production",
+    "pretest": "rollup -c",
+    "test": "mocha",
+    "lint": "eslint src test",
+    "doc": "jsdoc2md -t doc/readme.hbs src/*.js > README.md",
+    "prepublishOnly": "npm run build",
+    "coverage": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "no-plusplus": 0,
+      "comma-dangle": 0,
+      "no-nested-ternary": 0,
+      "function-paren-newline": 0,
+      "import/extensions": 0,
+      "arrow-parens": 0
+    }
+  },
+  "files": [
+    "build"
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peshitta/sedra-code-util.git"
+  },
+  "keywords": [
+    "Peshitta",
+    "Peshitto",
+    "Pshitta",
+    "Pshitto",
+    "Sedra",
+    "Sedra.js",
+    "Sedrajs",
+    "Aramaic",
+    "Syriac",
+    "CAL",
+    "Estrangela",
+    "Estrangelo"
+  ],
+  "author": "Greg Borota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peshitta/sedra-code-util/issues"
+  },
+  "homepage": "https://github.com/peshitta/sedra-code-util#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babelrc-rollup": "^3.0.0",
+    "coveralls": "^2.13.1",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "istanbul": "^0.4.5",
+    "jsdoc-to-markdown": "^3.0.0",
+    "mocha": "^3.5.0",
+    "rollup": "^0.49.3",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-istanbul": "^1.1.0",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}

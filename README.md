@@ -12,15 +12,19 @@ Utility library for Sedra 3 ASCII code transliteration
 
 ## Installation
 
+In order to use this library, [Node.js](https://nodejs.org) should be installed. 
+Then run:
 ```
 npm install sedra-code-util --save
 ```
+The package could also be downloaded directly from:
+[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.2.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.2.tgz)
 
 Following packages are available:
 * `sedra-code-util.js` - UMD ES5 version for use in browser, node, etc.
 * `sedra-code-util.min.js` - minified version of `sedra-code-util.js`
-* `sedra-code-util.esm.js` - ES6 module version, suitable for bundling with other 
-libraries and applications
+* `sedra-code-util.esm.js` - ES6 module version, suitable for bundling with
+other libraries and applications
 
 ## More information
 
@@ -38,7 +42,7 @@ libraries and applications
 
 The final goal for this work is to learn the Word of God as recorded by
 [Peshitta](https://en.wikipedia.org/wiki/Peshitta).
-You are welcomed to to improve this implementation or provide feeback. Please
+You are welcomed to to improve this implementation or provide feedback. Please
 feel free to [Fork](https://help.github.com/articles/fork-a-repo/), create a
 [Pull Request](https://help.github.com/articles/about-pull-requests/) or
 submit [Issues](https://github.com/peshitta/sedra-code-util/issues).
@@ -60,10 +64,10 @@ npm run build
     * [.yod](#module_sedra.yod) : <code>string</code>
     * [.consonants](#module_sedra.consonants) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_sedra.vowels) : <code>Array.&lt;string&gt;</code>
-    * [.diacretics](#module_sedra.diacretics) : <code>Array.&lt;string&gt;</code>
+    * [.diacritics](#module_sedra.diacritics) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_sedra.isConsonant) ⇒ <code>boolean</code>
     * [.isVowel](#module_sedra.isVowel) ⇒ <code>boolean</code>
-    * [.isDiacretic](#module_sedra.isDiacretic) ⇒ <code>boolean</code>
+    * [.isDiacritic](#module_sedra.isDiacritic) ⇒ <code>boolean</code>
 
 <a name="module_sedra.wow"></a>
 
@@ -89,10 +93,10 @@ Sedra consonants
 Sedra vowels
 
 **Kind**: static constant of [<code>sedra</code>](#module_sedra)  
-<a name="module_sedra.diacretics"></a>
+<a name="module_sedra.diacritics"></a>
 
-### sedra.diacretics : <code>Array.&lt;string&gt;</code>
-Sedra/CAL diacretic characters:
+### sedra.diacritics : <code>Array.&lt;string&gt;</code>
+Sedra/CAL diacritic characters:
 * __'__ dot above, Qushaya
 * __,__ dot below, Rukkakha
 * **_** line under
@@ -123,13 +127,13 @@ Is character c a Sedra 3 vowel?
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_sedra.isDiacretic"></a>
+<a name="module_sedra.isDiacritic"></a>
 
-### sedra.isDiacretic ⇒ <code>boolean</code>
-Is character c a diacretic? Same characters used for both Sedra 3 and CAL.
+### sedra.isDiacritic ⇒ <code>boolean</code>
+Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
 
 **Kind**: static constant of [<code>sedra</code>](#module_sedra)  
-**Returns**: <code>boolean</code> - true if c is a diacretic  
+**Returns**: <code>boolean</code> - true if c is a diacritic  
 
 | Param | Type | Description |
 | --- | --- | --- |

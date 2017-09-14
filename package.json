@@ -1,19 +1,20 @@
 {
   "name": "sedra-code-util",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility library for Sedra 3 ASCII code transliteration",
   "main": "build/sedra-code-util.js",
   "main݂Min": "build/sedra-code-util.min.js",
   "module": "build/sedra-code-util.esm.js",
   "scripts": {
-    "prebuild": "npm run doc && npm test && npm run lint",
-    "build": "rollup -c --environment BUILD:production",
-    "prepublishOnly": "npm run build",
     "pretest": "rollup -c",
     "test": "mocha",
+    "prebuild": "npm run doc && npm test && npm run lint",
+    "build": "npm run bundle",
+    "bundle": "rollup -c --environment BUILD:production",
     "lint": "eslint src test",
     "doc": "jsdoc2md -t doc/readme.hbs src/*.js > README.md",
-    "coverage": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "coverage": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": "airbnb-base",

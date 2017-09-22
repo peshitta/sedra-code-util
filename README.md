@@ -18,7 +18,7 @@ Then run:
 npm install sedra-code-util --save
 ```
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.2.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.2.tgz)
+[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.3.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.3.tgz)
 
 Following packages are available:
 * `sedra-code-util.js` - UMD ES5 version for use in browser, node, etc.
@@ -65,9 +65,12 @@ npm run build
     * [.consonants](#module_sedra.consonants) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_sedra.vowels) : <code>Array.&lt;string&gt;</code>
     * [.diacritics](#module_sedra.diacritics) : <code>Array.&lt;string&gt;</code>
+    * [.dotting](#module_sedra.dotting) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_sedra.isConsonant) ⇒ <code>boolean</code>
     * [.isVowel](#module_sedra.isVowel) ⇒ <code>boolean</code>
     * [.isDiacritic](#module_sedra.isDiacritic) ⇒ <code>boolean</code>
+    * [.isDotting](#module_sedra.isDotting) ⇒ <code>boolean</code>
+    * [.removeDotting](#module_sedra.removeDotting) ⇒ <code>string</code>
 
 <a name="module_sedra.wow"></a>
 
@@ -101,6 +104,12 @@ Sedra/CAL diacritic characters:
 * __,__ dot below, Rukkakha
 * **_** line under
 * __*__ Seyame
+
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+<a name="module_sedra.dotting"></a>
+
+### sedra.dotting : <code>Array.&lt;string&gt;</code>
+Vowels and diacritics: used for consonantal only mapping
 
 **Kind**: static constant of [<code>sedra</code>](#module_sedra)  
 <a name="module_sedra.isConsonant"></a>
@@ -138,4 +147,28 @@ Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
+
+<a name="module_sedra.isDotting"></a>
+
+### sedra.isDotting ⇒ <code>boolean</code>
+Returns true if c is dotting character
+
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+**Returns**: <code>boolean</code> - true if c is dotting  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| c | <code>string</code> | input character |
+
+<a name="module_sedra.removeDotting"></a>
+
+### sedra.removeDotting ⇒ <code>string</code>
+Remove dotting (vowels and diacritics), leaving consonantal word only.
+
+**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+**Returns**: <code>string</code> - consonantal word  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| word | <code>string</code> | input word to be processed |
 

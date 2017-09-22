@@ -1,5 +1,10 @@
-import { ok } from 'assert';
-import { isConsonant, isVowel, isDiacritic } from '../build/sedra-code-util';
+import { ok, strictEqual } from 'assert';
+import {
+  isConsonant,
+  isVowel,
+  isDiacritic,
+  removeDotting
+} from '../build/sedra-code-util';
 
 describe('Sedra', () => {
   describe('Util', () => {
@@ -37,5 +42,27 @@ describe('diacritics', () => {
     ok(isDiacritic('_'), '_ isDiacritic');
     ok(!isDiacritic(''), "'' isDiacritic");
     ok(!isDiacritic(' '), "' ' isDiacritic");
+  });
+});
+describe('removeDotting', () => {
+  it('Check consonantal and vocalised', () => {
+    const word = 'DXSR;A-DI;L;IOS';
+    const expected = removeDotting(word);
+    const vocalised = removeDotting("D'XeSaRi;aA-D,I,i;Li;I'oOS");
+    strictEqual(word, expected, 'removeDotting consonant only');
+    strictEqual(vocalised, expected, 'removeDotting vocalised');
+  });
+  it('Word with (wu) => (uO) mapping', () => {
+    const word = removeDotting('LBELDBB;CON');
+    const wordExpected = 'LBELDBB;CON';
+    const vocalised = removeDotting("LaB,EeLD'B,oB,a;C'uON");
+    const vocalisedExpected = wordExpected;
+    strictEqual(word, wordExpected, 'removeDotting_wu consonant');
+    strictEqual(vocalised, vocalisedExpected, 'removeDotting_wu vocalised');
+  });
+  it('Blank word returns blank', () => {
+    const word = removeDotting('');
+    const wordExpected = '';
+    strictEqual(word, wordExpected, 'removeDotting_blank');
   });
 });

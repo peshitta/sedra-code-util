@@ -1,6 +1,6 @@
 {
   "name": "sedra-code-util",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility library for Sedra 3 ASCII code transliteration",
   "main": "build/sedra-code-util.js",
   "main݂Min": "build/sedra-code-util.min.js",

@@ -1,14 +1,14 @@
-import babel from 'rollup-plugin-babel';
-import babelrc from 'babelrc-rollup';
+import buble from 'rollup-plugin-buble';
 import istanbul from 'rollup-plugin-istanbul';
 import uglify from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
 const isProduction = process.env.BUILD === 'production';
+const isDev = process.env.BUILD === 'dev';
 const banner = isProduction
   ? '/**\n' +
-    '* @file Utility library for Sedra 3 ASCII code transliteration\n' +
-    '* @version 1.0.0\n' +
+    '* @file Sedra 3 ASCII code transliteration utilities\n' +
+    '* @version 1.0.4\n' +
     '* @author Greg Borota\n' +
     '* @copyright (c) 2017 Greg Borota.\n' +
     '* @license MIT\n' +
@@ -40,10 +40,11 @@ const external = Object.keys(pkg.dependencies);
 const input = 'src/main.js';
 const name = 'sedraCodeUtil';
 const format = 'umd';
-const sourcemap = isProduction ? false : 'inline';
-const plugins = [babel(babelrc({ path: 'babelrc.json' }))];
+const globals = {};
+const sourcemap = !isProduction;
+const plugins = [buble()];
 
-// browser-friendly UMD build
+// browser/nodejs-friendly UMD build
 const targets = [
   {
     input,
@@ -51,6 +52,7 @@ const targets = [
     external,
     plugins: plugins.slice(0),
     name,
+    globals,
     banner,
     sourcemap
   }
@@ -77,16 +79,17 @@ if (isProduction) {
     })
   );
 
-  // browser-friendly minified UMD build
+  // browser/nodejs-friendly minified UMD build
   targets.push({
     input,
-    output: [{ file: pkg.main݂Min, format }],
+    output: [{ file: pkg.mainMin, format }],
     external,
     plugins,
     name,
+    globals,
     banner
   });
-} else {
+} else if (!isDev) {
   targets[0].plugins.push(
     istanbul({
       exclude: ['test/**/*', 'node_modules/**/*']

@@ -1,4 +1,4 @@
-/** @module sedra */
+/** @module sedraCodeUtil */
 /**
  * Wow semivowel
  * @constant

@@ -1,10 +1,10 @@
-import { ok, strictEqual } from 'assert';
-import {
+const { ok, strictEqual } = require('assert');
+const {
   isConsonant,
   isVowel,
   isDiacritic,
   removeDotting
-} from '../build/sedra-code-util';
+} = require('../build/sedra-code-util');
 
 describe('Sedra', () => {
   describe('Util', () => {

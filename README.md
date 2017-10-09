@@ -8,7 +8,7 @@
 [![devDependencies Status](https://david-dm.org/peshitta/sedra-code-util/dev-status.svg)](https://david-dm.org/peshitta/sedra-code-util?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/peshitta/sedra-code-util/badge.svg?branch=master)](https://coveralls.io/github/peshitta/sedra-code-util?branch=master)
 
-Utility library for Sedra 3 ASCII code transliteration
+Sedra 3 ASCII code transliteration utilities
 
 ## Installation
 
@@ -17,14 +17,15 @@ Then run:
 ```
 npm install sedra-code-util --save
 ```
-The package could also be downloaded directly from:
-[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.3.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.3.tgz)
 
-Following packages are available:
+Following bundles are available:
 * `sedra-code-util.js` - UMD ES5 version for use in browser, node, etc.
 * `sedra-code-util.min.js` - minified version of `sedra-code-util.js`
-* `sedra-code-util.esm.js` - ES6 module version, suitable for bundling with
-other libraries and applications
+* `sedra-code-util.esm.js` - ES6 module version, suitable for bundling with other 
+libraries and applications
+
+The package could also be downloaded directly from:
+[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.4.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.4.tgz)
 
 ## More information
 
@@ -59,113 +60,113 @@ npm run build
 
 ## API Reference
 
-* [sedra](#module_sedra)
-    * [.wow](#module_sedra.wow) : <code>string</code>
-    * [.yod](#module_sedra.yod) : <code>string</code>
-    * [.consonants](#module_sedra.consonants) : <code>Array.&lt;string&gt;</code>
-    * [.vowels](#module_sedra.vowels) : <code>Array.&lt;string&gt;</code>
-    * [.diacritics](#module_sedra.diacritics) : <code>Array.&lt;string&gt;</code>
-    * [.dotting](#module_sedra.dotting) : <code>Array.&lt;string&gt;</code>
-    * [.isConsonant](#module_sedra.isConsonant) ⇒ <code>boolean</code>
-    * [.isVowel](#module_sedra.isVowel) ⇒ <code>boolean</code>
-    * [.isDiacritic](#module_sedra.isDiacritic) ⇒ <code>boolean</code>
-    * [.isDotting](#module_sedra.isDotting) ⇒ <code>boolean</code>
-    * [.removeDotting](#module_sedra.removeDotting) ⇒ <code>string</code>
+* [sedraCodeUtil](#module_sedraCodeUtil)
+    * [.wow](#module_sedraCodeUtil.wow) : <code>string</code>
+    * [.yod](#module_sedraCodeUtil.yod) : <code>string</code>
+    * [.consonants](#module_sedraCodeUtil.consonants) : <code>Array.&lt;string&gt;</code>
+    * [.vowels](#module_sedraCodeUtil.vowels) : <code>Array.&lt;string&gt;</code>
+    * [.diacritics](#module_sedraCodeUtil.diacritics) : <code>Array.&lt;string&gt;</code>
+    * [.dotting](#module_sedraCodeUtil.dotting) : <code>Array.&lt;string&gt;</code>
+    * [.isConsonant](#module_sedraCodeUtil.isConsonant) ⇒ <code>boolean</code>
+    * [.isVowel](#module_sedraCodeUtil.isVowel) ⇒ <code>boolean</code>
+    * [.isDiacritic](#module_sedraCodeUtil.isDiacritic) ⇒ <code>boolean</code>
+    * [.isDotting](#module_sedraCodeUtil.isDotting) ⇒ <code>boolean</code>
+    * [.removeDotting](#module_sedraCodeUtil.removeDotting) ⇒ <code>string</code>
 
-<a name="module_sedra.wow"></a>
+<a name="module_sedraCodeUtil.wow"></a>
 
-### sedra.wow : <code>string</code>
+### sedraCodeUtil.wow : <code>string</code>
 Wow semivowel
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
-<a name="module_sedra.yod"></a>
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+<a name="module_sedraCodeUtil.yod"></a>
 
-### sedra.yod : <code>string</code>
+### sedraCodeUtil.yod : <code>string</code>
 Yod semivowel
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
-<a name="module_sedra.consonants"></a>
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+<a name="module_sedraCodeUtil.consonants"></a>
 
-### sedra.consonants : <code>Array.&lt;string&gt;</code>
+### sedraCodeUtil.consonants : <code>Array.&lt;string&gt;</code>
 Sedra consonants
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
-<a name="module_sedra.vowels"></a>
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+<a name="module_sedraCodeUtil.vowels"></a>
 
-### sedra.vowels : <code>Array.&lt;string&gt;</code>
+### sedraCodeUtil.vowels : <code>Array.&lt;string&gt;</code>
 Sedra vowels
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
-<a name="module_sedra.diacritics"></a>
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+<a name="module_sedraCodeUtil.diacritics"></a>
 
-### sedra.diacritics : <code>Array.&lt;string&gt;</code>
+### sedraCodeUtil.diacritics : <code>Array.&lt;string&gt;</code>
 Sedra/CAL diacritic characters:
 * __'__ dot above, Qushaya
 * __,__ dot below, Rukkakha
 * **_** line under
 * __*__ Seyame
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
-<a name="module_sedra.dotting"></a>
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+<a name="module_sedraCodeUtil.dotting"></a>
 
-### sedra.dotting : <code>Array.&lt;string&gt;</code>
+### sedraCodeUtil.dotting : <code>Array.&lt;string&gt;</code>
 Vowels and diacritics: used for consonantal only mapping
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
-<a name="module_sedra.isConsonant"></a>
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+<a name="module_sedraCodeUtil.isConsonant"></a>
 
-### sedra.isConsonant ⇒ <code>boolean</code>
+### sedraCodeUtil.isConsonant ⇒ <code>boolean</code>
 Is character c a Sedra 3 consonant?
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is Sedra 3 consonant  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_sedra.isVowel"></a>
+<a name="module_sedraCodeUtil.isVowel"></a>
 
-### sedra.isVowel ⇒ <code>boolean</code>
+### sedraCodeUtil.isVowel ⇒ <code>boolean</code>
 Is character c a Sedra 3 vowel?
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is Sedra 3 vowel  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_sedra.isDiacritic"></a>
+<a name="module_sedraCodeUtil.isDiacritic"></a>
 
-### sedra.isDiacritic ⇒ <code>boolean</code>
+### sedraCodeUtil.isDiacritic ⇒ <code>boolean</code>
 Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is a diacritic  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_sedra.isDotting"></a>
+<a name="module_sedraCodeUtil.isDotting"></a>
 
-### sedra.isDotting ⇒ <code>boolean</code>
+### sedraCodeUtil.isDotting ⇒ <code>boolean</code>
 Returns true if c is dotting character
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is dotting  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_sedra.removeDotting"></a>
+<a name="module_sedraCodeUtil.removeDotting"></a>
 
-### sedra.removeDotting ⇒ <code>string</code>
+### sedraCodeUtil.removeDotting ⇒ <code>string</code>
 Remove dotting (vowels and diacritics), leaving consonantal word only.
 
-**Kind**: static constant of [<code>sedra</code>](#module_sedra)  
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
 **Returns**: <code>string</code> - consonantal word  
 
 | Param | Type | Description |

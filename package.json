@@ -1,6 +1,6 @@
 {
   "name": "sedra-code-util",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Sedra 3 ASCII code transliteration utilities",
   "main": "build/sedra-code-util.js",
   "mainMin": "build/sedra-code-util.min.js",
@@ -60,7 +60,7 @@
   },
   "homepage": "https://github.com/peshitta/sedra-code-util#readme",
   "dependencies": {
-    "aramaic-mapper": "^1.1.2"
+    "aramaic-mapper": "^1.1.3"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",

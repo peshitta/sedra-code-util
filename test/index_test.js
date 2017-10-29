@@ -3,6 +3,7 @@ const {
   isConsonant,
   isVowel,
   isDiacritic,
+  isDotted,
   removeDotting
 } = require('../build/sedra-code-util');
 
@@ -44,6 +45,32 @@ describe('diacritics', () => {
     ok(!isDiacritic(' '), "' ' isDiacritic");
   });
 });
+
+describe('Sedra', () => {
+  describe('isDotted', () => {
+    it('Check consonantal and vocalised', () => {
+      const word = 'DXSR;A-DI;L;IOS';
+      const wordDotted = isDotted(word);
+      const vocalisedDotted = isDotted("D'XeSaRi;aA-D,I,i;Li;I'oOS");
+      strictEqual(wordDotted, false, 'isDotted consonant only');
+      strictEqual(vocalisedDotted, true, 'isDotted vocalised');
+    });
+    it('Word with (wu) => (uO) mapping', () => {
+      const word = isDotted('LBELDBB;CON');
+      const wordExpected = false;
+      const vocalised = isDotted("LaB,EeLD'B,oB,a;C'uON");
+      const vocalisedExpected = true;
+      strictEqual(word, wordExpected, 'isDotted_wu consonant');
+      strictEqual(vocalised, vocalisedExpected, 'isDotted_wu vocalised');
+    });
+    it('Blank word returns blank', () => {
+      const word = isDotted('');
+      const expected = false;
+      strictEqual(word, expected, 'isDotted_blank');
+    });
+  });
+});
+
 describe('removeDotting', () => {
   it('Check consonantal and vocalised', () => {
     const word = 'DXSR;A-DI;L;IOS';

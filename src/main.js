@@ -1,5 +1,5 @@
 /** @module sedraCodeUtil */
-import { clearDotting } from 'aramaic-mapper';
+import { hasDotting, clearDotting } from 'aramaic-mapper';
 
 /**
  * Sedra consonant name to value map
@@ -172,6 +172,13 @@ export const isDiacritic = dc => diacritics.indexOf(dc) > -1;
  * @returns { boolean } true if c is dotting
  */
 export const isDotting = vd => dotting.indexOf(vd) > -1;
+
+/**
+ * Return true if input word has vowels or diacritics
+ * @param { string } word input CAL code word
+ * @returns { boolean } true if word has vowels or diacritics
+ */
+export const isDotted = hasDotting(isDotting);
 
 /**
  * Remove dotting (vowels and diacritics), leaving consonantal word only.

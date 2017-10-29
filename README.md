@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.5.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.5.tgz)
+[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.6.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.6.tgz)
 
 ## More information
 
@@ -72,6 +72,7 @@ npm run build
     * [.isVowel](#module_sedraCodeUtil.isVowel) ⇒ <code>boolean</code>
     * [.isDiacritic](#module_sedraCodeUtil.isDiacritic) ⇒ <code>boolean</code>
     * [.isDotting](#module_sedraCodeUtil.isDotting) ⇒ <code>boolean</code>
+    * [.isDotted](#module_sedraCodeUtil.isDotted) ⇒ <code>boolean</code>
     * [.removeDotting](#module_sedraCodeUtil.removeDotting) ⇒ <code>string</code>
 
 <a name="module_sedraCodeUtil.consonantsByName"></a>
@@ -171,6 +172,18 @@ Returns true if c is dotting character
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
+
+<a name="module_sedraCodeUtil.isDotted"></a>
+
+### sedraCodeUtil.isDotted ⇒ <code>boolean</code>
+Return true if input word has vowels or diacritics
+
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+**Returns**: <code>boolean</code> - true if word has vowels or diacritics  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| word | <code>string</code> | input CAL code word |
 
 <a name="module_sedraCodeUtil.removeDotting"></a>
 

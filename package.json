@@ -1,6 +1,6 @@
 {
   "name": "sedra-code-util",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Sedra 3 ASCII code transliteration utilities",
   "main": "build/sedra-code-util.js",
   "mainMin": "build/sedra-code-util.min.js",
@@ -59,12 +59,14 @@
     "url": "https://github.com/peshitta/sedra-code-util/issues"
   },
   "homepage": "https://github.com/peshitta/sedra-code-util#readme",
-  "dependencies": {},
+  "dependencies": {
+    "aramaic-mapper": "^1.1.2"
+  },
   "devDependencies": {
     "coveralls": "^3.0.0",
-    "eslint": "^4.8.0",
-    "eslint-config-airbnb-base": "^12.0.2",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "istanbul": "^0.4.5",
     "jsdoc-to-markdown": "^3.0.0",
     "mocha": "^4.0.1",

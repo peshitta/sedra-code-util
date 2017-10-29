@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.4.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.4.tgz)
+[https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.5.tgz](https://registry.npmjs.org/sedra-code-util/-/sedra-code-util-1.0.5.tgz)
 
 ## More information
 
@@ -61,10 +61,11 @@ npm run build
 ## API Reference
 
 * [sedraCodeUtil](#module_sedraCodeUtil)
-    * [.wow](#module_sedraCodeUtil.wow) : <code>string</code>
-    * [.yod](#module_sedraCodeUtil.yod) : <code>string</code>
+    * [.consonantsByName](#module_sedraCodeUtil.consonantsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.consonants](#module_sedraCodeUtil.consonants) : <code>Array.&lt;string&gt;</code>
+    * [.vowelsByName](#module_sedraCodeUtil.vowelsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.vowels](#module_sedraCodeUtil.vowels) : <code>Array.&lt;string&gt;</code>
+    * [.diacriticsByName](#module_sedraCodeUtil.diacriticsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.diacritics](#module_sedraCodeUtil.diacritics) : <code>Array.&lt;string&gt;</code>
     * [.dotting](#module_sedraCodeUtil.dotting) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_sedraCodeUtil.isConsonant) ⇒ <code>boolean</code>
@@ -73,16 +74,10 @@ npm run build
     * [.isDotting](#module_sedraCodeUtil.isDotting) ⇒ <code>boolean</code>
     * [.removeDotting](#module_sedraCodeUtil.removeDotting) ⇒ <code>string</code>
 
-<a name="module_sedraCodeUtil.wow"></a>
+<a name="module_sedraCodeUtil.consonantsByName"></a>
 
-### sedraCodeUtil.wow : <code>string</code>
-Wow semivowel
-
-**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
-<a name="module_sedraCodeUtil.yod"></a>
-
-### sedraCodeUtil.yod : <code>string</code>
-Yod semivowel
+### sedraCodeUtil.consonantsByName : <code>Object.&lt;string, string&gt;</code>
+Sedra consonant name to value map
 
 **Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
 <a name="module_sedraCodeUtil.consonants"></a>
@@ -91,10 +86,26 @@ Yod semivowel
 Sedra consonants
 
 **Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+<a name="module_sedraCodeUtil.vowelsByName"></a>
+
+### sedraCodeUtil.vowelsByName : <code>Object.&lt;string, string&gt;</code>
+Sedra vowel name to value map
+
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
 <a name="module_sedraCodeUtil.vowels"></a>
 
 ### sedraCodeUtil.vowels : <code>Array.&lt;string&gt;</code>
 Sedra vowels
+
+**Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
+<a name="module_sedraCodeUtil.diacriticsByName"></a>
+
+### sedraCodeUtil.diacriticsByName : <code>Object.&lt;string, string&gt;</code>
+Sedra/CAL diacritic name map
+1. qushaya: __'__ - dot above
+2. rukkakha: __,__ - dot below
+3. lineaOccultans: **_** - linea occultans
+4. seyame: __*__ - seyame, rebwe
 
 **Kind**: static constant of [<code>sedraCodeUtil</code>](#module_sedraCodeUtil)  
 <a name="module_sedraCodeUtil.diacritics"></a>

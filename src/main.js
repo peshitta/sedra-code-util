@@ -38,40 +38,40 @@ export const consonantsByName = Object.freeze(
   })
 );
 
-const c = consonantsByName;
+const l = consonantsByName;
 /**
  * Sedra consonants
  * @constant
  * @type { string[] }
 */
 export const consonants = Object.freeze([
-  c.alaph,
-  c.beth,
-  c.gamal,
-  c.dalath,
+  l.alaph,
+  l.beth,
+  l.gamal,
+  l.dalath,
 
-  c.he,
-  c.waw,
-  c.zayn,
+  l.he,
+  l.waw,
+  l.zayn,
 
-  c.heth,
-  c.teth,
-  c.yod,
+  l.heth,
+  l.teth,
+  l.yod,
 
-  c.kaph,
-  c.lamadh,
-  c.mim,
-  c.nun,
+  l.kaph,
+  l.lamadh,
+  l.mim,
+  l.nun,
 
-  c.semkath,
-  c.e,
-  c.pe,
-  c.sadhe,
+  l.semkath,
+  l.e,
+  l.pe,
+  l.sadhe,
 
-  c.qoph,
-  c.resh,
-  c.shin,
-  c.taw
+  l.qoph,
+  l.resh,
+  l.shin,
+  l.taw
 ]);
 
 /**
@@ -150,28 +150,28 @@ export const dotting = Object.freeze(vowels.concat(diacritics));
  * @param { string } c input character
  * @returns { boolean } true if c is Sedra 3 consonant
  */
-export const isConsonant = cc => consonants.indexOf(cc) > -1;
+export const isConsonant = c => consonants.indexOf(c) > -1;
 
 /**
  * Is character c a Sedra 3 vowel?
  * @param { string } c input character
  * @returns { boolean } true if c is Sedra 3 vowel
  */
-export const isVowel = vc => vowels.indexOf(vc) > -1;
+export const isVowel = c => vowels.indexOf(c) > -1;
 
 /**
  * Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
  * @param { string } c input character
  * @returns { boolean } true if c is a diacritic
  */
-export const isDiacritic = dc => diacritics.indexOf(dc) > -1;
+export const isDiacritic = c => diacritics.indexOf(c) > -1;
 
 /**
  * Returns true if c is dotting character
  * @param { string } c input character
  * @returns { boolean } true if c is dotting
  */
-export const isDotting = vd => dotting.indexOf(vd) > -1;
+export const isDotting = c => dotting.indexOf(c) > -1;
 
 /**
  * Return true if input word has vowels or diacritics

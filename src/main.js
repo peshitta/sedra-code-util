@@ -1,5 +1,5 @@
 /** @module sedraCodeUtil */
-import { hasDotting, clearDotting } from 'aramaic-mapper';
+import { hasDotting, clearDotting, getSort } from 'aramaic-mapper';
 
 /**
  * Sedra consonant name to value map
@@ -139,6 +139,56 @@ export const diacritics = Object.freeze([
 ]);
 
 /**
+ * CAL to ordinal ASCII value. Used for sorting:
+ * a b c d e f g h i j k l m n o p q r s t u v
+ * w x y z {
+ * @constant
+ * @type { Object.<string, string> }
+*/
+export const letterAsciiMap = Object.freeze(
+  Object.create(null, {
+    [l.alaph]: { value: 'a', enumerable: true },
+    [l.beth]: { value: 'b', enumerable: true },
+    [l.gamal]: { value: 'c', enumerable: true },
+    [l.dalath]: { value: 'd', enumerable: true },
+
+    [l.he]: { value: 'e', enumerable: true },
+    [l.waw]: { value: 'f', enumerable: true },
+    [l.zayn]: { value: 'g', enumerable: true },
+
+    [l.heth]: { value: 'h', enumerable: true },
+    [l.teth]: { value: 'i', enumerable: true },
+    [l.yod]: { value: 'j', enumerable: true },
+
+    [l.kaph]: { value: 'k', enumerable: true },
+    [l.lamadh]: { value: 'l', enumerable: true },
+    [l.mim]: { value: 'm', enumerable: true },
+    [l.nun]: { value: 'n', enumerable: true },
+
+    [l.semkath]: { value: 'o', enumerable: true },
+    [l.e]: { value: 'p', enumerable: true },
+    [l.pe]: { value: 'q', enumerable: true },
+    [l.sadhe]: { value: 'r', enumerable: true },
+
+    [l.qoph]: { value: 's', enumerable: true },
+    [l.resh]: { value: 't', enumerable: true },
+    [l.shin]: { value: 'u', enumerable: true },
+    [l.taw]: { value: 'v', enumerable: true },
+
+    [v.pthaha]: { value: 'w', enumerable: true }, // a
+    [v.zqapha]: { value: 'x', enumerable: true }, // o
+    [v.rbasa]: { value: 'y', enumerable: true }, // e
+    [v.hbasa]: { value: 'z', enumerable: true }, // i
+    [v.esasa]: { value: '{', enumerable: true }, // u
+
+    [d.qushaya]: { value: '', enumerable: true },
+    [d.rukkakha]: { value: ',', enumerable: true },
+    [d.lineaOccultans]: { value: '', enumerable: true },
+    [d.seyame]: { value: '', enumerable: true }
+  })
+);
+
+/**
  * Vowels and diacritics: used for consonantal only mapping
  * @constant
  * @type { Array.<string> }
@@ -186,3 +236,12 @@ export const isDotted = hasDotting(isDotting);
  * @returns { string } consonantal word
  */
 export const removeDotting = clearDotting(isDotting);
+
+/**
+ * Comparator function to be used for sorting words
+ * @static
+ * @param { string } word1 first word to compare
+ * @param { string } word2 second word to compare
+ * @returns { number } -1, 0, 1 depending on word sorting
+ */
+export const sort = getSort(letterAsciiMap, removeDotting);
